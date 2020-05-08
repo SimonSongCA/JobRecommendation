@@ -1,0 +1,44 @@
+2020-05-07 20:27:18,987 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-05-07 20:40:02,140 [Worker-17: Creating maven-archetype-webapp] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' /Users/apple/Desktop/JobRecommendation/JobRecommendation/pom.xml
+2020-05-07 20:40:03,380 [Worker-17: Creating maven-archetype-webapp] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: Simon:JobRecommendation:0.0.1-SNAPSHOT @ /Users/apple/Desktop/JobRecommendation/JobRecommendation/pom.xml.
+2020-05-07 20:40:04,859 [Worker-17: Creating maven-archetype-webapp] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /JobRecommendation/src/main/java
+2020-05-07 20:40:04,860 [Worker-17: Creating maven-archetype-webapp] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /JobRecommendation/src/test/java
+2020-05-07 20:40:07,432 [Worker-17: Creating maven-archetype-webapp] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 5 sec
+2020-05-07 20:40:08,139 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-07 20:40:08,139 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/apple/Desktop/JobRecommendation/JobRecommendation/src/main/resources
+2020-05-07 20:40:08,142 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-07 20:40:08,143 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/apple/Desktop/JobRecommendation/JobRecommendation/src/test/resources
+2020-05-07 20:40:08,389 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-07 20:40:08,389 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/apple/Desktop/JobRecommendation/JobRecommendation/src/main/resources
+2020-05-07 20:40:08,391 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-07 20:40:08,391 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/apple/Desktop/JobRecommendation/JobRecommendation/src/test/resources
+2020-05-07 20:40:14,199 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-07 20:40:14,199 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/apple/Desktop/JobRecommendation/JobRecommendation/src/main/resources
+2020-05-07 20:40:14,201 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-07 20:40:14,201 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/apple/Desktop/JobRecommendation/JobRecommendation/src/test/resources
+2020-05-07 20:41:44,553 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-07 20:41:44,553 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/apple/Desktop/JobRecommendation/JobRecommendation/src/main/resources
+2020-05-07 20:41:44,554 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-07 20:41:44,555 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/apple/Desktop/JobRecommendation/JobRecommendation/src/test/resources
+2020-05-07 20:45:11,975 [Worker-21: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: Simon:JobRecommendation:0.0.1-SNAPSHOT @ /Users/apple/Desktop/JobRecommendation/JobRecommendation/pom.xml.
+2020-05-07 20:45:13,129 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 20:45:13,134 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/apple/Desktop/JobRecommendation/JobRecommendation/src/main/resources
+2020-05-07 20:45:13,136 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 20:45:13,137 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/apple/Desktop/JobRecommendation/JobRecommendation/src/test/resources
+2020-05-07 20:45:13,138 [Worker-21: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of JobRecommendation
+2020-05-07 20:45:13,140 [Worker-21: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for JobRecommendation
+2020-05-07 20:45:13,147 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 20:45:13,874 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 20:45:13,875 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/apple/Desktop/JobRecommendation/JobRecommendation/src/main/resources
+2020-05-07 20:45:13,877 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 20:45:13,878 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/apple/Desktop/JobRecommendation/JobRecommendation/src/test/resources
+2020-05-07 20:45:35,557 [Worker-26: Launching Executing install in _Users_apple_Desktop_JobRecommendation_JobRecommendation] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/apple/Desktop/JobRecommendation/JobRecommendation
+2020-05-07 20:45:35,558 [Worker-26: Launching Executing install in _Users_apple_Desktop_JobRecommendation_JobRecommendation] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2020-05-07 20:45:41,421 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 20:45:41,423 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/apple/Desktop/JobRecommendation/JobRecommendation/src/main/resources
+2020-05-07 20:45:41,424 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 20:45:41,425 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/apple/Desktop/JobRecommendation/JobRecommendation/src/test/resources
+2020-05-07 20:47:46,984 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 20:47:46,985 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/apple/Desktop/JobRecommendation/JobRecommendation/src/main/resources
+2020-05-07 20:47:46,987 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 20:47:46,987 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/apple/Desktop/JobRecommendation/JobRecommendation/src/test/resources
