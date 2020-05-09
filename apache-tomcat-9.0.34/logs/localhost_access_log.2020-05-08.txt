@@ -1,0 +1,15 @@
+127.0.0.1 - - [08/May/2020:20:52:05 -0700] "GET / HTTP/1.1" 200 11415
+0:0:0:0:0:0:0:1 - - [08/May/2020:20:54:19 -0700] "GET /JobRecommendation/search HTTP/1.1" 200 29
+0:0:0:0:0:0:0:1 - - [08/May/2020:21:01:58 -0700] "GET /JobRecommendation/search HTTP/1.1" 200 29
+0:0:0:0:0:0:0:1 - - [08/May/2020:21:06:28 -0700] "GET /JobRecommendation/search HTTP/1.1" 200 19
+0:0:0:0:0:0:0:1 - - [08/May/2020:21:06:28 -0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [08/May/2020:21:12:02 -0700] "GET /jupiter/search?username=1234 HTTP/1.1" 404 727
+0:0:0:0:0:0:0:1 - - [08/May/2020:21:12:17 -0700] "GET /JobRecommendation/search?username=1234 HTTP/1.1" 200 19
+0:0:0:0:0:0:0:1 - - [08/May/2020:21:14:03 -0700] "GET /jupiter/search HTTP/1.1" 404 727
+0:0:0:0:0:0:0:1 - - [08/May/2020:21:14:11 -0700] "GET /JobRecommendation/search HTTP/1.1" 200 41
+0:0:0:0:0:0:0:1 - - [08/May/2020:21:21:52 -0700] "GET /JobRecommendation/search HTTP/1.1" 200 41
+0:0:0:0:0:0:0:1 - - [08/May/2020:21:21:52 -0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [08/May/2020:21:22:02 -0700] "GET /JobRecommendation HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [08/May/2020:21:22:02 -0700] "GET /JobRecommendation/ HTTP/1.1" 404 731
+127.0.0.1 - - [08/May/2020:21:22:22 -0700] "GET / HTTP/1.1" 200 11415
+0:0:0:0:0:0:0:1 - - [08/May/2020:21:22:51 -0700] "GET /JobRecommendation/recommendation HTTP/1.1" 200 63
