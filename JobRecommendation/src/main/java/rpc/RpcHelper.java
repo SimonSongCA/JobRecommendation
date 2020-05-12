@@ -13,8 +13,10 @@ public class RpcHelper {
 		response.setContentType("application/json");
 		response.getWriter().print(array);
 	}
+	
 	public static void writeJsonObject(HttpServletResponse response, JSONObject obj) throws IOException {
 		response.setContentType("application/json");
 		response.getWriter().print(obj);
 	}
+	
 }

@@ -1,7 +1,7 @@
 package rpc;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.json.JSONArray;
-import org.json.JSONObject;
 
+import entity.Item;
 import external.GitHubClient;
 
 /**
@@ -32,21 +32,21 @@ public class SearchItem extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
-//		response.setContentType("application/json");
-//		PrintWriter writer = response.getWriter();
-//		if (request.getParameter("username") != null) {
-//			JSONObject obj = new JSONObject();
-//			String username = request.getParameter("username");
-//			obj.put("username", username);
-//			writer.print(obj);
-//		}
+		
 		double lat = Double.parseDouble(request.getParameter("lat"));
 		double lon = Double.parseDouble(request.getParameter("lon"));
-
 		GitHubClient client = new GitHubClient();
-		RpcHelper.writeJsonArray(response, client.search(lat, lon, null));
-
+		
+		// store the result based on 'lat' and 'lon' on GitHubClient
+		List<Item> items = client.search(lat, lon, null);
+		// write our filtered result back into JSONArray and store it 
+		// into 'array'
+		JSONArray array = new JSONArray();
+		for (Item item : items) {
+			array.put(item.toJSONObject());
+		}
+		// use RpcHelper to write JSONArray on the web page
+		RpcHelper.writeJsonArray(response, array);
 	}
 
 	/**
@@ -55,12 +55,6 @@ public class SearchItem extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-//		double lat = Double.parseDouble(request.getParameter("lat"));
-//		double lon = Double.parseDouble(request.getParameter("lon"));
-//
-//		GitHubClient client = new GitHubClient();
-//		RpcHelper.writeJsonArray(response, client.search(lat, lon, null));
-
 	}
 
 }
