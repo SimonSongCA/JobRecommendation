@@ -1,0 +1,6 @@
+package password;
+
+public class Password {
+	public static final String APIkeyword = "8f9f430e7858e709ba9333cb202519ba0f6d3839";
+	public static final String ModelID = "ex_YCya9nrn";
+}
