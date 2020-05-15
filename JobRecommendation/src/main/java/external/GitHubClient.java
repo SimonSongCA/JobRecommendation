@@ -1,12 +1,12 @@
 package external;
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 import org.apache.http.HttpEntity;
@@ -24,7 +24,7 @@ import entity.Item.ItemBuilder;
 public class GitHubClient {
 	private static final String URL_TEMPLATE = "https://jobs.github.com/positions.json?descroption=%s&lat=%s&long=%s";
 	private static final String DEFAULT_KEYWORD = "developer";
-	
+
 	public List<Item> search(double lat, double lon, String keyword) {
 		if (keyword == null) {
 			keyword = DEFAULT_KEYWORD;
@@ -38,8 +38,8 @@ public class GitHubClient {
 		String url = String.format(URL_TEMPLATE, keyword, lat, lon);
 		CloseableHttpClient httpClient = HttpClients.createDefault();
 		try {
-			//construct a client, execute a http request which contains github API url
-			//and return a http response
+			// construct a client, execute a http request which contains github API url
+			// and return a http response
 			CloseableHttpResponse response = httpClient.execute(new HttpGet(url));
 			if (response.getStatusLine().getStatusCode() != 200) {
 				return new ArrayList();
@@ -48,12 +48,13 @@ public class GitHubClient {
 			if (entity == null) {
 				return new ArrayList();
 			}
-			//getContent return InputStream, the input of constructor of the InputStreamReader is InputStream
-			//InputStreamReader extends Reader
+			// getContent return InputStream, the input of constructor of the
+			// InputStreamReader is InputStream
+			// InputStreamReader extends Reader
 			BufferedReader reader = new BufferedReader(new InputStreamReader(entity.getContent()));
 			StringBuilder responseBody = new StringBuilder();
 			String line = null;
-			while((line = reader.readLine()) != null) {
+			while ((line = reader.readLine()) != null) {
 				responseBody.append(line);
 			}
 			JSONArray array = new JSONArray(responseBody.toString());
@@ -67,9 +68,28 @@ public class GitHubClient {
 		}
 		return new ArrayList<>();
 	}
-	
+
+	// processing of the raw data from GitHub API
 	private List<Item> getItemList(JSONArray array) {
 		List<Item> itemList = new ArrayList<>();
+		List<String> descriptionList = new ArrayList<>();
+
+		for (int i = 0; i < array.length(); i++) {
+			// We need to extract keywords from description since GitHub API
+			// doesn't return keywords.
+			String description = getStringFieldOrEmpty(array.getJSONObject(i), "description");
+			if (description.equals("") || description.equals("\n")) {
+				descriptionList.add(getStringFieldOrEmpty(array.getJSONObject(i), "title"));
+			} else {
+				descriptionList.add(description);
+			}
+		}
+		
+		// We need to get keywords from multiple text in one request since
+		// MonkeyLearnAPI has limitation on request per minute.
+		List<List<String>> keywords = MonkeyLearnClient
+				.extractKeywords(descriptionList.toArray(new String[descriptionList.size()]));
+
 		for (int i = 0; i < array.length(); ++i) {
 			JSONObject object = array.getJSONObject(i);
 			ItemBuilder builder = new ItemBuilder();
@@ -79,13 +99,14 @@ public class GitHubClient {
 			builder.setAddress(getStringFieldOrEmpty(object, "address"));
 			builder.setUrl(getStringFieldOrEmpty(object, "url"));
 			builder.setImageUrl(getStringFieldOrEmpty(object, "company_logo"));
+			builder.setKeywords(new HashSet<String>(keywords.get(i)));
 			Item item = builder.build();
 			itemList.add(item);
 		}
 
 		return itemList;
 	}
-	
+
 	private String getStringFieldOrEmpty(JSONObject obj, String field) {
 		return obj.isNull(field) ? "" : obj.getString(field);
 	}

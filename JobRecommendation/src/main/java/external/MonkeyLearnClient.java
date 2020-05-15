@@ -55,6 +55,10 @@ public class MonkeyLearnClient {
 		return new ArrayList<>();
 	}
 
+	// process the JSONArray into JSONObject and extract the 'keyword' key
+	// in the JSONObject add add its value into keywords.
+	// keywords: List<String>.
+	// topKeywords: List<List<String>>
 	private static List<List<String>> getKeywords(JSONArray mlResultArray) {
 		List<List<String>> topKeywords = new ArrayList<>();
 		// Iterate the result array and convert it to our format.
@@ -66,7 +70,6 @@ public class MonkeyLearnClient {
 				// We just need the keyword, excluding other fields.
 				String keyword = (String) keywordObject.get("keyword");
 				keywords.add(keyword);
-
 			}
 			topKeywords.add(keywords);
 		}
