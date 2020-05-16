@@ -6,14 +6,17 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
+		<item key="selection" value="Password"/>
 		<list key="findhistory">
+			<item value="MySQLDBUtil"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Password"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="787"/>
-		<item key="DIALOG_Y_ORIGIN" value="256"/>
+		<item key="DIALOG_X_ORIGIN" value="1208"/>
+		<item key="DIALOG_Y_ORIGIN" value="264"/>
 		<item key="DIALOG_WIDTH" value="294"/>
 		<item key="DIALOG_HEIGHT" value="408"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>

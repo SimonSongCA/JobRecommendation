@@ -4,4 +4,5 @@
     <fullyQualifiedTypeName name="org.json.JSONObject"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="external.GitHubClient"/>
+    <fullyQualifiedTypeName name="password.Password"/>
 </qualifiedTypeNameHistroy>

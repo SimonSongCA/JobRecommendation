@@ -1,0 +1,12 @@
+127.0.0.1 - - [15/May/2020:21:50:16 -0700] "GET / HTTP/1.1" 200 11415
+0:0:0:0:0:0:0:1 - - [15/May/2020:21:52:57 -0700] "GET /JobRecommendation HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [15/May/2020:21:52:57 -0700] "GET /JobRecommendation/ HTTP/1.1" 200 3993
+0:0:0:0:0:0:0:1 - - [15/May/2020:21:52:57 -0700] "GET /JobRecommendation/styles/main.css HTTP/1.1" 200 4555
+0:0:0:0:0:0:0:1 - - [15/May/2020:21:52:57 -0700] "GET /JobRecommendation/scripts/apis.js HTTP/1.1" 200 3115
+0:0:0:0:0:0:0:1 - - [15/May/2020:21:52:57 -0700] "GET /JobRecommendation/scripts/utils.js HTTP/1.1" 200 5098
+0:0:0:0:0:0:0:1 - - [15/May/2020:21:52:57 -0700] "GET /JobRecommendation/scripts/main.js HTTP/1.1" 200 16271
+0:0:0:0:0:0:0:1 - - [15/May/2020:21:52:58 -0700] "GET /JobRecommendation/login HTTP/1.1" 500 3274
+0:0:0:0:0:0:0:1 - - [15/May/2020:21:52:58 -0700] "GET /favicon.ico HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [15/May/2020:21:53:07 -0700] "POST /JobRecommendation/register HTTP/1.1" 500 3283
+0:0:0:0:0:0:0:1 - - [15/May/2020:21:53:18 -0700] "POST /JobRecommendation/register HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [15/May/2020:21:53:19 -0700] "POST /JobRecommendation/register HTTP/1.1" 404 682

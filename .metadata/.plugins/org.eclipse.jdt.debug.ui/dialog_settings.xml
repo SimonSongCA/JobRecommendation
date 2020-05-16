@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth0" value="150"/>
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth1" value="362"/>
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth2" value="73"/>
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.sortColumn" value="1"/>
 	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
 		<item key="ShowStatusLine" value="true"/>
 		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode&gt;=JobRecommendation/\/Users\/apple\/.m2\/repository\/org\/apache\/tomcat\/tomcat-catalina\/9.0.30\/tomcat-catalina-9.0.30.jar=/maven.pomderived=/true=/=/org.eclipse.jst.component.dependency=/\/WEB-INF\/lib=/=/maven.pomderived=/true=/=/org.eclipse.jst.component.archivename=/tomcat-catalina-9.0.30.jar=/=/maven.groupId=/org.apache.tomcat=/=/maven.artifactId=/tomcat-catalina=/=/maven.version=/9.0.30=/=/maven.scope=/compile=/&amp;lt;org.apache.catalina.realm(AuthenticatedUserRealm.class[AuthenticatedUserRealm&lt;/infoNode&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;"/>
@@ -10,5 +14,7 @@
 			<item key="DIALOG_Y_ORIGIN" value="195"/>
 			<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
 		</section>
+	</section>
+	<section name="expressionHistory">
 	</section>
 </section>
