@@ -1,0 +1,31 @@
+package rpc;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import entity.Item;
+import entity.Item.ItemBuilder;
+
+
+public class RpcHelper {
+
+	public static void writeJsonArray(HttpServletResponse response, JSONArray array) throws IOException {
+		response.setContentType("application/json");
+		response.getWriter().print(array);
+	}
+	
+	public static void writeJsonObject(HttpServletResponse response, JSONObject obj) throws IOException {
+		response.setContentType("application/json");
+		response.getWriter().print(obj);
+	}
+	
+	
+}
