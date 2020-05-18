@@ -16,7 +16,6 @@ import password.Password;
 public class MySQLConnection {
 	private Connection conn;
 	
-	// connect to the MySQL database on RDS with password, instance, username, etc.
 	public MySQLConnection() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver").getConstructor().newInstance();
@@ -26,7 +25,6 @@ public class MySQLConnection {
 		}
 	}
 	
-	// close the database connection
 	public void close() {
 		if (conn != null) {
 			try {
@@ -37,7 +35,6 @@ public class MySQLConnection {
 		}
 	}
 
-	// 
 	public void setFavoriteItems(String userId, Item item) {
 		if (conn == null) {
 			System.err.println("DB connection failed");
@@ -55,7 +52,6 @@ public class MySQLConnection {
 		}
 	}
 
-	// 
 	public void unsetFavoriteItems(String userId, String itemId) {
 		if (conn == null) {
 			System.err.println("DB connection failed");
@@ -72,8 +68,6 @@ public class MySQLConnection {
 		}
 	}
 
-	// save the five parameters of Item 'item' into a table called 'items' 
-	// into MySQL RDS database.
 	public void saveItem(Item item) {
 		if (conn == null) {
 			System.err.println("DB connection failed");

@@ -55,15 +55,12 @@ public class SearchItem extends HttpServlet {
 		// Close the connection to MySQL
 		connection.close();
 		
-		// Set up a new JSONArray and write all the favorite items into it.
 		JSONArray array = new JSONArray();
 		for (Item item : items) {
 			JSONObject obj = item.toJSONObject();
 			obj.put("favorite", favoritedItemIds.contains(item.getItemId()));
 			array.put(obj);
 		}
-		
-		// update the response
 		RpcHelper.writeJsonArray(response, array);
 	}
 
