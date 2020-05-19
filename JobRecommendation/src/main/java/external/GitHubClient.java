@@ -68,6 +68,41 @@ public class GitHubClient {
 		}
 		return new ArrayList<>();
 	}
+	public JSONArray search1(double lat, double lon, String keyword) {
+		if (keyword == null) {
+			keyword = DEFAULT_KEYWORD;
+		}
+		try {
+			keyword = URLEncoder.encode(keyword, "UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		String url = String.format(URL_TEMPLATE, keyword, lat, lon);
+		CloseableHttpClient httpClient = HttpClients.createDefault();
+		try {
+			CloseableHttpResponse response = httpClient.execute(new HttpGet(url));
+			if (response.getStatusLine().getStatusCode() != 200) {
+				return new JSONArray();
+			}
+			HttpEntity entity = response.getEntity();
+			if (entity == null) {
+				return new JSONArray();
+			}
+			BufferedReader reader = new BufferedReader(new InputStreamReader(entity.getContent()));
+			StringBuilder responseBody = new StringBuilder();
+			String line = null;
+			while ((line = reader.readLine()) != null) {
+				responseBody.append(line);
+			}
+			return new JSONArray(responseBody.toString());
+		} catch (ClientProtocolException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return new JSONArray();
+	}
+
 
 	// processing of the raw data from GitHub API
 	private List<Item> getItemList(JSONArray array) {
@@ -95,8 +130,8 @@ public class GitHubClient {
 			ItemBuilder builder = new ItemBuilder();
 
 			builder.setItemId(getStringFieldOrEmpty(object, "id"));
-			builder.setName(getStringFieldOrEmpty(object, "name"));
-			builder.setAddress(getStringFieldOrEmpty(object, "address"));
+			builder.setName(getStringFieldOrEmpty(object, "title"));
+			builder.setAddress(getStringFieldOrEmpty(object, "location"));
 			builder.setUrl(getStringFieldOrEmpty(object, "url"));
 			builder.setImageUrl(getStringFieldOrEmpty(object, "company_logo"));
 			builder.setKeywords(new HashSet<String>(keywords.get(i)));

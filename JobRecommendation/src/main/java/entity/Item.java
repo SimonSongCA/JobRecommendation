@@ -88,7 +88,7 @@ public class Item {
 		obj.put("item_id", itemId);
 		obj.put("name", name);
 		obj.put("address", address);
-		obj.put("keyword", new JSONArray(keywords));
+		obj.put("keywords", new JSONArray(keywords));
 		obj.put("image_url", imageUrl);
 		obj.put("url", url);
 		return obj;

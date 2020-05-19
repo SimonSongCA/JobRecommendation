@@ -47,26 +47,32 @@ public class SearchItem extends HttpServlet {
 		// based on lat, lon, and default keywords(null).
 		List<Item> items = client.search(lat, lon, null);
 		
-		// build a connection with MySQL with current passwords, user name, DB_Instance, etc.
+		
+//		double lat = Double.parseDouble(request.getParameter("lat"));
+//		double lon = Double.parseDouble(request.getParameter("lon"));
+//		GitHubClient client = new GitHubClient();
+//		RpcHelper.writeJsonArray(response, client.search1(lat, lon, null));
+
+		
+//		// build a connection with MySQL with current passwords, user name, DB_Instance, etc.
 		MySQLConnection connection = new MySQLConnection();
-		// fetch the IDs of all the favorite items on MySQL and return as a Set<String>
+//		// fetch the IDs of all the favorite items on MySQL and return as a Set<String>
 		Set<String> favoritedItemIds = connection.getFavoriteItemIds(userId);
-		
-		// Close the connection to MySQL
+//		
+//		// Close the connection to MySQL
 		connection.close();
-		
-		// Set up a new JSONArray and write all the favorite items into it.
+//		
+//		// Set up a new JSONArray and write all the favorite items into it.
 		JSONArray array = new JSONArray();
 		for (Item item : items) {
 			JSONObject obj = item.toJSONObject();
 			obj.put("favorite", favoritedItemIds.contains(item.getItemId()));
 			array.put(obj);
 		}
-		
+//		
 		// update the response
 		RpcHelper.writeJsonArray(response, array);
 	}
-
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
