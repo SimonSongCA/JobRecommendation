@@ -39,13 +39,13 @@ public class SearchItem extends HttpServlet {
 		String userId = request.getParameter("user_id");
 		double lat = Double.parseDouble(request.getParameter("lat"));
 		double lon = Double.parseDouble(request.getParameter("lon"));
-		
+		String keyword = request.getParameter("description");
 		// Create a GitHub Client
 		GitHubClient client = new GitHubClient();
 		
 		// items: raw GitHub result which includes all the primitive information
 		// based on lat, lon, and default keywords(null).
-		List<Item> items = client.search(lat, lon, null);
+		List<Item> items = client.search(lat, lon, keyword);
 		
 		
 //		double lat = Double.parseDouble(request.getParameter("lat"));
@@ -69,7 +69,7 @@ public class SearchItem extends HttpServlet {
 			obj.put("favorite", favoritedItemIds.contains(item.getItemId()));
 			array.put(obj);
 		}
-//		
+		
 		// update the response
 		RpcHelper.writeJsonArray(response, array);
 	}

@@ -37,7 +37,8 @@ public class MySQLConnection {
 		}
 	}
 
-	// 
+	// convert the data in Item item and put them into 'history' table 
+	// and store them as the favoritedItems based on current userId
 	public void setFavoriteItems(String userId, Item item) {
 		if (conn == null) {
 			System.err.println("DB connection failed");
@@ -55,7 +56,8 @@ public class MySQLConnection {
 		}
 	}
 
-	// 
+	// delete the corresponding data in the 'history' table based on current
+	// userId.
 	public void unsetFavoriteItems(String userId, String itemId) {
 		if (conn == null) {
 			System.err.println("DB connection failed");
@@ -90,7 +92,7 @@ public class MySQLConnection {
 			statement.executeUpdate();
 			
 			sql = "INSERT IGNORE INTO keywords VALUES (?, ?)";
-                    statement = conn.prepareStatement(sql);
+            statement = conn.prepareStatement(sql);
 			statement.setString(1, item.getItemId());
 			for (String keyword : item.getKeywords()) {
 				statement.setString(2, keyword);
@@ -193,6 +195,8 @@ public class MySQLConnection {
 	}
 
 
+	// Based on the current userId, get the two columns (first_name, last_name)
+	// and output them as 'full name' as a String.
 	public String getFullname(String userId) {
 		if (conn == null) {
 			System.err.println("DB connection failed");
