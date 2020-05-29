@@ -80,3 +80,5 @@
 0:0:0:0:0:0:0:1 - - [21/May/2020:16:26:38 -0700] "GET /JobRecommendation/search?user_id=1234&lat=33.6631141&lon=-117.84285369999999 HTTP/1.1" 200 2364
 0:0:0:0:0:0:0:1 - - [21/May/2020:16:26:44 -0700] "GET /JobRecommendation/history?user_id=1234 HTTP/1.1" 200 839
 0:0:0:0:0:0:0:1 - - [21/May/2020:16:26:51 -0700] "GET /JobRecommendation/recommendation?user_id=1234&lat=33.6631141&lon=-117.84285369999999 HTTP/1.1" 200 1475
+127.0.0.1 - - [21/May/2020:17:36:46 -0700] "GET / HTTP/1.1" 200 11415
+0:0:0:0:0:0:0:1 - - [21/May/2020:17:36:46 -0700] "GET /JobRecommendation/search HTTP/1.1" 500 1254

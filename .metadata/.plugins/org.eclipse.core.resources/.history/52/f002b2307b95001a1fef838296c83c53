@@ -1,6 +1,0 @@
-package password;
-
-public class Password {
-	public static final String APIkeyword = "";
-	public static final String ModelID = "";
-}
