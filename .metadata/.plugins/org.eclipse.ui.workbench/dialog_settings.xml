@@ -4,4 +4,10 @@
 		<item key="DIALOG_X_ORIGIN" value="506"/>
 		<item key="DIALOG_Y_ORIGIN" value="170"/>
 	</section>
+	<section name="ImportExportAction">
+		<item key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID" value="org.eclipse.jst.servlet.ui.internal.wizard.WebComponentExportWizard"/>
+		<list key="ImportExportPage.STORE_EXPANDED_EXPORT_CATEGORIES">
+			<item value="org.eclipse.wst.web.ui"/>
+		</list>
+	</section>
 </section>
