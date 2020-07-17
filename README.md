@@ -14,7 +14,7 @@ Keywords:
 AWS, Amazon RDS, EC2, Apache Tomcat, MySQL, RESTful API, Content-based Recommendation Algorithm
 
 **************************************************************
-               ****How to use the website *****
+                 How to use the website
 **************************************************************
 1. Please visit http://18.188.125.18/JobRecommendation/ to test its functionality. 
 2. Register an account with your own username and password, and then go back to the main page.
@@ -24,5 +24,5 @@ AWS, Amazon RDS, EC2, Apache Tomcat, MySQL, RESTful API, Content-based Recommend
 6. Under 'Recommendation' page, the website will return the recommendation items based on the content saved under the 'My Favorite' page.
 7. You are all done!
 
-Note: If you cannot see the content under the 'nearby' page, it's probably because the freed MonkeyLearn API used in the project throttles and 
+Note: If you cannot see the content under the 'nearby' page, it's probably because the free MonkeyLearn API used in the project throttles and 
       thus cannot return the results. Normally this happens at the end of the month, and you may try it at the beginning of the month :)
