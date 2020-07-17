@@ -16,7 +16,7 @@ AWS, Amazon RDS, EC2, Apache Tomcat, MySQL, RESTful API, Content-based Recommend
 **************************************************************
                ****How to use the website *****
 **************************************************************
-1. Please visit http://http://18.188.125.18/JobRecommendation/ to test its functionality. 
+1. Please visit http://18.188.125.18/JobRecommendation/ to test its functionality. 
 2. Register an account with your own username and password, and then go back to the main page.
 3. Login with the current username and password.
 4. The website will return the nearby recommended items with a default keyword of "engineer'
