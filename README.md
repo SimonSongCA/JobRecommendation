@@ -16,6 +16,8 @@ AWS, Amazon RDS, EC2, Apache Tomcat, MySQL, RESTful API, Content-based Recommend
 **************************************************************
                  How to use the website
 **************************************************************
+IMPORTANT UPDATE: the service of getting the geolocation of users is temporarily disabled. This is because the current project is using a deprecated method in main.js file(line 130) and the method is no longer accepted to use. Author of the project is working on fixing the issue(the project may switch to https for security reasons in the future release).
+
 1. Please visit http://18.188.125.18/JobRecommendation/ to test its functionality. 
 2. Register an account with your own username and password, and then go back to the main page.
 3. Login with the current username and password.
